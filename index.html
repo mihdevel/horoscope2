@@ -9,7 +9,10 @@
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous"
   />
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
   <base href="http://http://0.0.0.0:8000/">
 </head>
 <body>
@@ -40,7 +43,6 @@
   function Hclick1()
    {
      p_url = "http://sf-pyw.mosyag.in/m04/api/forecasts"
-     console.log('enter');
      $.getJSON(p_url, function(data){
        $.each(data["prophecies"], function(i, d){
          $("#p-" + i).html("<p>" + d + "</p>")
